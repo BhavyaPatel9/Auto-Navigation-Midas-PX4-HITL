@@ -11,10 +11,9 @@ This repository contains a production-ready autonomous navigation stack designed
 
 
 ## 📺 Project Demo
+
 <p align="center">
-  <video src="https://github.com/BhavyaPatel9/Auto-Navigation-Midas-PX4-HITL/Media/Midas_Unreal_2.mp4" width="100%" controls autoplay loop muted>
-    Your browser does not support the video tag.
-  </video>
+  <img src="Media/Midas_Jetson__1.gif" width="100%">
 </p>
 
 > **Note:** The video above showcases real-time obstacle avoidance using the MiDaS depth engine integrated with PX4.
