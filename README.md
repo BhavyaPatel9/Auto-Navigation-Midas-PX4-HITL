@@ -11,14 +11,32 @@ This repository contains a production-ready autonomous navigation stack designed
 
 
 ## 📺 Project Demo
+---
 
+### Unreal Simulation
+<p align="center">
+  <img src="Media/Midas_Unreal__1.gif" width="100%">
+</p>
+
+**Description:**  
+This video shows the **the drone in the Unreal Engine simulation environment**. This setup helps validate the navigation logic and obstacle avoidance behavior before deploying on real hardware.
+
+---
+
+### Jetson Deployment – PX4-HITL
 <p align="center">
   <img src="Media/Midas_Jetson__1.gif" width="100%">
 </p>
 
-> **Note:** The video above showcases real-time obstacle avoidance using the MiDaS depth engine integrated with PX4.
----
+**Description:**  
+This video shows the drone navigating between obstacles using a **vision-based autonomy pipeline running on NVIDIA Jetson**. The RGB camera feed from Unreal is processed by the **MiDaS depth estimation model** to generate a real-time depth map. The system detects nearby obstacles from the depth output and sends velocity commands to **PX4-HITL** for safe navigation.
 
+**Pipeline:**  
+RGB Camera → MiDaS Depth Estimation → Obstacle Detection → Motion Controller → PX4 Offboard Control
+
+
+
+**Note:** These demonstrations showcase a **vision-based obstacle avoidance system for autonomous drone navigation in GPS-denied environments.**
 ## 🌟 Key Features
 * **Dual-Mode Validation:** Optimized scripts for both **SITL** (Software-In-The-Loop) using MAVSDK and **HITL** (Hardware-In-The-Loop) using PyMavlink.
 * **Edge-Optimized Inference:** Custom TensorRT implementation with manual CUDA memory management for high-frequency (30+ FPS) depth mapping on NVIDIA Jetson platforms.
